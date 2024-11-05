@@ -1,0 +1,99 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/main"
+    tools:context="com.example.chatfirst.MainActivity">
+
+    <!-- Header Layout -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="#550DDE"
+        android:padding="16dp"
+        android:id="@+id/header">
+
+        <TextView
+            android:id="@+id/headerTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ChatFirst"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="16dp">
+
+        </TextView>
+
+
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/header">
+
+    </ListView>
+
+    <!-- Show Button (at the bottom) -->
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/showButton"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="16dp"
+        android:background="@drawable/rounded_button"
+        android:src="@drawable/baseline_add_24"
+        android:textColor="@android:color/white">
+
+    </androidx.appcompat.widget.AppCompatImageButton>
+
+    <!-- Add Contact Button (above showButton) -->
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/addContactButton"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_alignParentEnd="true"
+        android:layout_above="@id/showButton"
+        android:layout_margin="16dp"
+        android:background="@drawable/rounded_button"
+        android:src="@drawable/baseline_person_add_24"
+        android:textColor="@android:color/white"
+        android:visibility="invisible">
+
+    </androidx.appcompat.widget.AppCompatImageButton>
+
+    <!-- Edit Contact Button (above addContactButton) -->
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/searchContactButton"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_alignParentEnd="true"
+        android:layout_above="@id/addContactButton"
+        android:layout_margin="16dp"
+        android:background="@drawable/rounded_button"
+        android:src="@drawable/baseline_search_24"
+        android:textColor="@android:color/white"
+        android:visibility="invisible">
+
+    </androidx.appcompat.widget.AppCompatImageButton>
+
+    <!-- Delete Contact Button (above editContactButton) -->
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/deleteContactButton"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_alignParentEnd="true"
+        android:layout_above="@id/searchContactButton"
+        android:layout_margin="16dp"
+        android:background="@drawable/rounded_button"
+        android:src="@drawable/baseline_delete_24"
+        android:textColor="@android:color/white"
+        android:visibility="invisible">
+
+    </androidx.appcompat.widget.AppCompatImageButton>
+</RelativeLayout>
